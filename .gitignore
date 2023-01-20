@@ -1,0 +1,12 @@
+# Directories
+.vs
+.DS_Store
+bin/
+bin-int/
+!vendor/bin
+
+# Files
+*.sln
+**/*.user
+**/*.vcxproj
+**/*.vcxproj.filters

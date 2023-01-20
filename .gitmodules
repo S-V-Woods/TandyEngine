@@ -1,0 +1,10 @@
+[submodule "TandyEngine/vendor/spdlog"]
+	path = TandyEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "TandyEngine/vendor/GLFW"]
+	path = TandyEngine/vendor/GLFW
+	url = https://github.com/TheCherno/glfw
+[submodule "TandyEngine/vendor/ImGui"]
+	path = TandyEngine/vendor/ImGui
+	url = https://github.com/TheCherno/imgui
+	branch = docking
