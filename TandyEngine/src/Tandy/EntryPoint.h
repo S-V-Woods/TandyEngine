@@ -1,7 +1,6 @@
 #pragma once
 #include "Log.h"
 #include "Text.h" 
-#include "../../Text.h"
 
 #ifdef TS_PLATFORM_WINDOWS
 

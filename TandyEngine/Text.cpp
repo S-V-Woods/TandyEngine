@@ -7,20 +7,27 @@ namespace Tandy {
 
 	void Text:: textf(std::string& msg)
 		
-	{	/*
-		int b1 = msg.find("<b>");
-		int b2 = msg.find("</b>");
-		int u1 = msg.find("<u>");
-		int u2 = msg.find("</u>");
-		*/
+	{	
+		
+		int64_t b1 = msg.find("<b>");
+		int64_t b2 = msg.find("</b>");
+		int64_t u1 = msg.find("<u>");
+		int64_t u2 = msg.find("</u>");
+		
 		//cout << "b1:" << b1 << " b2:" << b2 << "\nu1:" << u1 << " u2:" << u2 << "\n";
 
 		//int bs = b2 - b1;
-		std::string bSub = msg.substr(int(msg.find("<b>")), int(msg.find("</b>")) - int(msg.find("<b>")));
+		//std::string bSub = msg.substr(int(msg.find("<b>")), int(msg.find("</b>")) - int(msg.find("<b>")));
+		std::string bSub = msg.substr(b1, b2 - b1);
 		//Tandy::Log::GetLogger()->warn(bSub);
 		//int us = u2 - u1;
 		//std::string uSub = msg.substr(u1, us);
-		std::string uSub = msg.substr(int(msg.find("<u>")), int(msg.find("</u>")) - int(msg.find("<u>")));
+		//std::string uSub = msg.substr(int(msg.find("<u>")), int(msg.find("</u>")) - int(msg.find("<u>")));
+		msg.replace(b1, b2, bSub);
+		msg.replace(u1, u2, bSub);
+		//Tandy::Text::textf(std::string(bSub));
+
+
 	}
 
 }
