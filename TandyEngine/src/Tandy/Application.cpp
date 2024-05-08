@@ -6,8 +6,6 @@ namespace Tandy {
 
 	Application::~Application() {}
 
-	void Application:: OnEvent() {} //can be empty right now
-
 	void Application::Run() {
 		while (true);
 	}

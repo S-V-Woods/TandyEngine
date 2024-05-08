@@ -8,7 +8,6 @@ namespace Tandy {
 		public:
 			Application();
 			virtual ~Application();
-			virtual void OnEvent();
 
 			void Run();
 	};
