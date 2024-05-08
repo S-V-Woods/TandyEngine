@@ -1,4 +1,5 @@
 #pragma once
+#include "Log.h"
 
 #ifdef TS_PLATFORM_WINDOWS
 
@@ -9,6 +10,7 @@
 		Tandy::Log::Init();
 		// TODO: (optional) can be rewritten to use a macro instead
 		Tandy::Log::GetLogger()->info("Tandy Engine Start!");
+		TS_INFO("Tandy Engine Start!");
 		// start app
 		auto app = Tandy::CreateApplication();
 		// trigger app start event

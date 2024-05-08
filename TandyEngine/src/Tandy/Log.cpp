@@ -2,8 +2,8 @@
 #include "spdlog/sinks/stdout_color_sinks.h"
 
 namespace Tandy{
+	std::shared_ptr<spdlog::logger> Log::logger;
 
-	std::shared_ptr<spdlog::logger> Log::	logger;
 	void Log:: Init()
 	{
 		spdlog::set_pattern("%^[%T} %n: %v%$");
