@@ -7,9 +7,20 @@ namespace Tandy {
 
 	Text::textf(std::string& msg)
 	{
-		//spdlog::set_pattern("%^[%T} %n: %v%$");
-		//logger = spdlog::stdout_color_mt("TANDY");
-		//logger->set_level(spdlog::level::trace);
+
+		int b1 = msg.find("<b>");
+		int b2 = msg.find("</b>");
+		int u1 = msg.find("<u>");
+		int u2 = msg.find("</u>");
+
+		cout << "b1:" << b1 << " b2:" << b2 << "\nu1:" << u1 << " u2:" << u2 << "\n";
+
+		int bs = b2 - b1;
+		string bSub = s.substr(b1, bs);
+		cout << "\nbold: " << bSub;
+		int us = u2 - u1;
+		string uSub = s.substr(u1, us);
+		cout << "\nunderline: " << uSub;
 	}
 
 }
